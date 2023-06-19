@@ -1,0 +1,8 @@
+Options +FollowSymLinks
+RewriteEngine On
+
+# Если каталог или файл существует, используйте его напрямую
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# В противном случае передайте запрос на index.php
+RewriteRule . index.php
